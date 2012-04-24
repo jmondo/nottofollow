@@ -1,0 +1,49 @@
+<%= content_for :header do %>
+  <h1 class="handle">@jmondo  <small>607 following</small></h1>
+<% end %>
+
+
+
+<%= content_for :sidebar do %>
+  <% users = [
+    {
+      nickname: "@polyfish42",
+      name: "Jacob Brady",
+      tweet_count: 12,
+      user_description: "Babson Marketing/Student, Apple Enthusiast, Nerdy Character Actor, Wantrepreneur, ENTP, great at ironing, public speaking, and omeletts.",
+      image_path: "https://twimg0-a.akamaihd.net/profile_images/1804366328/Me_normal.jpg"
+    }, {
+      nickname: "@ryandawidjan",
+      name: "Ryan Dawidjan",
+      tweet_count: 5,
+      user_description: "lacrosse player. @babson student. avid learner. early-adopter. BOS [tech/vc/biz]. Co-founder @StartupBabson",
+      image_path: "https://twimg0-a.akamaihd.net/profile_images/2094657999/259392_10150271543486421_679381420_9349861_6252488_o-1_2_normal.jpg"
+    }, {
+      nickname: "@mchang",
+      name: "Mark L. Chang",
+      tweet_count: 7,
+      user_description: "Computer engineering professor. Professional procrastinator.",
+      image_path: "https://twimg0-a.akamaihd.net/profile_images/1176625398/spin_normal.jpg"
+    }, {
+      nickname: "@cgallello",
+      name: "Chris Gallello",
+      tweet_count: 14,
+      user_description: "Student, designer, entrepreneur, engineer, and photographer.",
+      image_path: "https://twimg0-a.akamaihd.net/profile_images/936528486/twit_normal.jpg"
+    }
+  ] %>
+
+  <% users.each do |user| %>
+    <div class="twitter_user">
+      <%= image_tag user[:image_path], class: "avatar" %>
+      <div class="user_info">
+        <span class="tweet_count"><%= user[:tweet_count] %></span>
+        <span class="username"><%= user[:nickname] %></span>
+        <span class="name">/ <%= user[:name] %></span>
+        <p class="user_description"><%= user[:user_description] %></p>
+      </div>
+    </div>
+  <% end %>
+
+<% end %>
+
