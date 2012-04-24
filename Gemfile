@@ -28,6 +28,9 @@ gem 'bourbon'
 gem 'tab_menu'
 gem "twitter-bootstrap-rails", "~> 2.0.1.0"
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 group :development do
   gem 'rspec-rails'
 

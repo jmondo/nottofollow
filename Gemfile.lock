@@ -104,6 +104,7 @@ GEM
       spin
     haml (3.1.4)
     has_scope (0.5.1)
+    hashie (1.2.0)
     heroku (2.24.1)
       launchy (>= 0.3.2)
       netrc (~> 0.7.1)
@@ -154,6 +155,16 @@ GEM
     multi_json (1.3.2)
     netrc (0.7.1)
     nokogiri (1.5.2)
+    oauth (0.4.6)
+    omniauth (1.1.0)
+      hashie (~> 1.2)
+      rack
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.10)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     orm_adapter (0.0.7)
     pg (0.13.2)
     polyglot (0.3.3)
@@ -292,6 +303,8 @@ DEPENDENCIES
   kaminari
   launchy
   mocha
+  omniauth
+  omniauth-twitter
   pg
   postmaster_general (~> 0.1)
   pry
